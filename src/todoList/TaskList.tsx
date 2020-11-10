@@ -7,9 +7,9 @@ import {todoList} from '../App'
 const TaskList = () => {
 	return (
 		<ul>
-			{todoList.map(item => 
+			{todoList.map((item, index) => 
 
-				<li>
+				<li key={index}>
 					{item.description}
 					{item.isDone && (
 						<span>✓</span>

@@ -14,11 +14,10 @@ export interface UserData {
 const UserDataForm: React.FC = () => {
 
   const [userData, setUserData] = useState({name:''});
-  console.log('n&t', userData)
+
   const handleChange = (e:any) => {
     setUserData({name: e.target.value})
-    console.log(e);
-    console.log(userData)
+    
   }
 
   const content = ( 
