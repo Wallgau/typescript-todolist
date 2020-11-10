@@ -4,17 +4,17 @@ import TaskList from "./index";
 import {TaskProps, Item} from '../type'
 configure({ adapter: new Adapter() });
 
-it("renders without crashing", () => {
 	const props:TaskProps = {
 		todoList: [],
 		toggleIsDone:(index:number)=> {}
 	}
+it("renders without crashing", () => {
 	shallow(<TaskList {...props}/>);
 });
 
 it("renders Account header", () => {
-  const wrapper = shallow(<TaskList />);
-  const welcome = <ul>{todoList.map((item, index) => 
+	const wrapper = shallow(<TaskList {...props}/>);
+  const welcome = <ul>{props.todoList.map((item, index) => 
 
 				<li key={index}>
 					{item.description}
