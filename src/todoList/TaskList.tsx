@@ -1,16 +1,6 @@
 import React, { useState } from 'react';
-import {Item} from '../type'
+import {todoList} from '../App'
 
-export const todoList: Item[] = [
-	{
-		description: 'go to the gym',
-		isDone: false
-	},
-	{
-		description: 'go to the grocery',
-		isDone: false
-	}
-]
 
 
 
