@@ -12,10 +12,9 @@ it("renders without crashing", () => {
 	shallow(<TaskList {...props}/>);
 });
 
-it("renders Account header", () => {
+it("display element of the list", () => {
 	const wrapper = shallow(<TaskList {...props}/>);
   const welcome = <ul>{props.todoList.map((item, index) => 
-
 				<li key={index}>
 					{item.description}
 					{item.isDone && (
