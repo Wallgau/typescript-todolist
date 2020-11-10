@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TaskList from './todoList/TaskList';
-import {Item} from './type'
+import  TaskList  from './todoList/TaskList';
 
 //main goal: list of item to do and check if it is completed or not
 //item will be description and done state
@@ -14,14 +13,10 @@ import {Item} from './type'
 
 
 function App() {
-	const [list, setList]:Item = useState([])
 
-	const addItem = (e:any) => {
-		 setList({...list, description:e.target.value, isDone: false})
-	}
   return (
     <>
-			<TaskList list={list} addItem={addItem}/>
+      <TaskList/>
     </>
   );
 }

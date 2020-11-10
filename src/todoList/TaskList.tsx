@@ -1,16 +1,23 @@
 import React, { useState } from 'react';
-import { Item } from '../type';
+import {Item} from '../type'
 
-interface Props {
-	list: Item[]
-}
+export const todoList: Item[] = [
+	{
+		description: 'go to the gym',
+		isDone: false
+	},
+	{
+		description: 'go to the grocery',
+		isDone: false
+	}
+]
 
 
 
-const TaskList: React.FC<Props> = ({list}) => {
+const TaskList = () => {
 	return (
 		<ul>
-			{list.map((item:Item) => 
+			{todoList.map(item => 
 
 				<li>
 					{item.description}
