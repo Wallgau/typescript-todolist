@@ -14,7 +14,7 @@ it("renders without crashing", () => {
 
 it("display element of the list", () => {
 	const wrapper = shallow(<TaskList {...props}/>);
-  const welcome = <ul>{props.todoList.map((item, index) => 
+  const list = <ul>{props.todoList.map((item, index) => 
 				<li key={index}>
 					{item.description}
 					{item.isDone && (
@@ -22,5 +22,5 @@ it("display element of the list", () => {
 					)}
 			</li>
 			)}</ul>;
-  expect(wrapper.contains(welcome)).toEqual(true);
+  expect(wrapper.contains(list)).toEqual(true);
 });

@@ -17,8 +17,23 @@ it("renders without crashing", () => {
 
 it("contains a h1", () => {
   const wrapper = shallow(<UserDataForm {...props} />);
-  const psy = wrapper.
   const title = <h1>TODO LIST</h1>;
   expect(wrapper.contains(title)).toEqual(true);
-  wrapper.simulate('click');
 });
+
+it("contains input with props", () => {
+  const wrapper = shallow(<UserDataForm {...props} />);
+  const input = <input value={props.description} onChange={props.handleChange} />;
+  expect(wrapper.contains(input)).toEqual(true);
+});
+
+it("contains button with props", () => {
+  const wrapper = shallow(<UserDataForm {...props} />);
+  const button = <button className='addButton' type='button' onClick={props.addItem}>Add Task</button>;
+  expect(wrapper.contains(button)).toEqual(true);
+});
+
+        
+
+
+
